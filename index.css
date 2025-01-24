@@ -1,0 +1,112 @@
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #111; /* Fond noir pour un aspect borne d'arcade */
+    color: #fff;
+    flex-direction: column;
+    text-align: center;
+    background-image: url('https://i.pinimg.com/originals/e4/ee/ad/e4eead772cf51813ae2f65f5ae88aac2.gif'); /* Gif Bitcoin comme fond */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Conteneur principal du jeu */
+.game-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ombre plus forte */
+    width: 400px;
+    text-align: center;
+}
+
+/* Titre */
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12, 0 0 30px #f39c12; /* Néon jaune/or pour correspondre au Bitcoin */
+}
+
+/* Bouton de réinitialisation */
+button {
+    background-color: #f39c12; /* Couleur or/BTC pour le bouton */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-shadow: 0 0 5px #f39c12, 0 0 10px #f39c12; /* Effet néon */
+}
+
+button:hover {
+    background-color: #e67e22; /* Touche d'orange pour un effet Bitcoin */
+}
+
+/* Tableau de jeu */
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+/* Style des cases */
+.cell {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #333; /* Fond gris foncé */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #444; /* Bordure claire */
+    box-shadow: 0 0 5px #fff, 0 0 10px #f39c12; /* Effet néon jaune/or autour des cases */
+}
+
+.cell:hover {
+    background-color: #555;
+}
+
+.cell.player1 {
+    background-color: #f39c12; /* Jaune/or pour le joueur 1 (représente Bitcoin) */
+}
+
+.cell.player2 {
+    background-color: #34495e; /* Gris foncé pour le joueur 2 (contraste avec le jaune/or) */
+}
+
+/* Message */
+#message {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #f39c12, 0 0 10px #f39c12; /* Effet texte néon jaune/or */
+}
+
+/* Style du gif */
+#game-over-gif {
+    width: 200px;
+    margin-top: 20px;
+    display: none; /* caché par défaut */
+}
